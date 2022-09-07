@@ -1,1 +1,1 @@
-# cpsc332-participations
+# cpsc332-participation
