@@ -1,0 +1,64 @@
+<!-- This is the Chapter 3 Demo page    
+    More HTML for CPSC 314 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>Fake Form Demo</title>
+        <link rel="icon" href="favicon2.png">
+</head>
+
+<body>
+        <h1>Hello, World! Welcome to my Form! Who is this?</h1>
+        <img src="icee.jpg"
+                alt="Shamelessly stolen from https://i.kym-cdn.com/photos/images/original/000/000/601/C6QJPRHW4QF6KFDP7XJNW24TNDI4YNF2.jpg">
+
+        <form action="submission.html" method="GET">
+
+                <p>
+                        <label for="first">First Name:</label>
+                        <input type="text" name="first" id="first">
+                </p>
+
+                <p>
+                        <label for="last">Last Name:</label>
+                        <input type="text" name="last" id="last">
+                </p>
+                <p>
+                        <label for="snowboard">Do you like snowboarding?</label>
+                        <input type="checkbox" name="snowboard" id="snowboard">
+
+                </p>
+                <p>
+                        <fieldset>
+                                <legend>Select Your Favorite Food:</legend>
+
+                                <input type="radio" id="pho" name="fav_food" value="Pho">
+                                <label for="html">Pho</label><br>
+                                <input type="radio" id="rice" name="fav_food" value="Rice">
+                                <label for="css">Rice</label><br>
+                                <input type="radio" id="noodles" name="fav_food" value="Noodles">
+                                <label for="javascript">Noodles</label>
+                        </fieldset>
+                </p>
+                <p>            
+                        <p>Select the Best Activity:</p>
+                        <select name="activity">
+                                <option value="camping">Camping</option>
+                                <option value="hiking">Hiking</option>
+                                <option value="yoyoing">Yoyoing</option>
+                                <option value="slackline">Slackline</option>
+                                <option value="kendama">Kendama</option>
+                        </select>                         
+                </p>
+                <p>
+                        <label for="secret">Enter Your Secret Password:</label>
+                        <input type="password" name="secret" maxlength="12" size="12">
+                </p>
+            
+                <input type="submit" value="Submit Feedback">
+        </form>
+</body>
+
+</html>
