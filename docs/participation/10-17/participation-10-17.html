@@ -106,6 +106,22 @@
                     context.closePath();
                 };
 
+                function animFrameId = window.requestAnimationFrame(() => {
+
+                    ball2Coords[0] += xInc;
+                    if(ball2Coords[0] < 0 || ball2Coords[0] > canvas.width){
+                        xInc *= -1;
+                    }
+
+                    ball2Coords[1] += yInc
+                    if(ball2Coords[1] < 0 || ball2Coords[1] > canvas.height){
+                        yInc *= -1;
+                    }
+
+                    ball2.move(ball2Coords[0], ball2Coords[1]);
+
+                    });
+                
 
                 Ball.prototype.clear = function () {
                     cutCircle(context, this.position[0], this.position[1], this.radius + 10);
@@ -138,7 +154,12 @@
             //     console.log("Hello!");
             // };
 
-
+            
+            var ball2Coords = [85,55]
+            var xInc = 3;
+            var yInc = 3;
+            ball2.draw();
+                     
             var ball1 = new Ball(50, "orange", [55, 55]);
 
             // console.log(ball1.speed); //testing new property
@@ -175,7 +196,7 @@
                 newBall.draw();
 
                 //alternate2
-                // ball1.draw();
+                ball1.draw();
                 // ball2.move(xVal, yVal);
             };
             //#endregion
