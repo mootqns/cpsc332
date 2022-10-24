@@ -3,12 +3,6 @@
 let form = document.getElementById("myForm");
 let table= document.getElementById('data');
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    submit();
-})
-
-
 const submit = ()=> {  
     let dog_cat = document.getElementById("dog_cat").value;
     let tea_coffee = document.getElementById("tea_coffee").value;
@@ -24,3 +18,8 @@ const submit = ()=> {
     })
     form.reset(); 
 }
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    submit();
+})
