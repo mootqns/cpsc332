@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-21 Participation</title>
+    <style>
+        body {
+             background-color: #606c38;
+        }
+        #fs-legend {
+            padding: 5px;
+            color: #fefae0;
+        }
+
+        fieldset {
+            border: 2px dashed #fefae0;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        form {
+            color: #fefae0;
+            padding: 3px;
+            margin: 5px;
+        }
+
+        form div {
+            padding: 3px;
+        }
+
+        form button {
+            color: #606c38
+        }
+    </style>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <fieldset>
+        <legend id="fs-legend">CPSC 332 10/21 Participation</legend>
+        <form action="./submission.html" method="post" id="myForm">
+            <div>
+              <label for="dog_cat">Dogs or Cats?</label>
+              <input type="text" name="dog_cat" id="dog_cat">
+              <button type="button">Save Data</button>
+            </div>
+            <div>
+              <label for="tea_coffee">Tea or Coffee?</label>
+              <input type="text" name="tea_coffee" id="tea_coffee">
+              <button type="button">Save Data</button>
+            </div>
+            <div>
+              <label for="sun_snow">Snow or Sun?</label>
+              <input type="text" name="sun_snow" id="sun_snow">
+              <button type="button">Save Data</button>
+            </div>
+            <div>
+                <a href="./submission.html">
+                    <input type="submit" value="Submit Response">
+                </a>
+            </div>
+          </form>
+           <a href="../../index.html">Back to the Index</a>
+    </fieldset>
+</body>
+</html>
