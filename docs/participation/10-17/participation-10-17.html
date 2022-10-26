@@ -106,7 +106,7 @@
                     context.closePath();
                 };
 
-                function animFrameId = window.requestAnimationFrame(() => {
+                function animFrameIdx = window.requestAnimationFrame( () => {
 
                     ball2Coords[0] += xInc;
                     if(ball2Coords[0] < 0 || ball2Coords[0] > canvas.width){
