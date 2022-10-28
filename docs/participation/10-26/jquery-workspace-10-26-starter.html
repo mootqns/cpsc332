@@ -39,32 +39,66 @@
             //#6 Events -- handled similar to standard JS but more concise!
             //let's add a button with JQuery. it's content (label) and an id!
             $("#container").click(() => {
-                alert("clicked")
+                //text!
             });
 
             //now let's add an event handler for when we click it
-
+            $("#container").on("click", callBackFunction)
 
             //we need a callback function!
+            function callBackFunction(){
+                console.log("Div clicked: (HTML Content JS: "
+                    +this.innerHTML
+                    +")");
+
+                    console.log("Div clicked: (HTML Content JS: "
+                    +$(this).html()
+                    +")");
+
+                
+            }
 
             //let's try a different event
             //JavaScript Method
+            let headers = document.getElementsByTagName("h")
+            for (const element of headers) {
+                element.addEventListener("dblclick", function () {
+                    console.log("double click detected on h1 element");
+                    $("body").append($("<h2>").text("new h2"))
 
-
+                });
+            }
 
             //JQuery Method
-
+            $("h1").on("dblclick", function() {
+                console.log("double click detected on h1 element");
+                $("body").append($("<h2>").text("new h2"))
+            });
 
             //#7. Styles!
             //method 1: property-value pair
-
+            $("div").css("border", "2px double purple");
             //method 2: object literal
-
+            $("div").css({
+                padding: "10px", 
+                borderRadius: "20px",
+                "margin-top": "10px",
+                marginBottom: "5px",
+                backgroundColor: "rgb(235, 97, 35)"
+            });
 
             //Activity (Using JQuery):
             //1. Center the button created in this lecture using the property-value pair CSS method 1 demonstrated during lecture.
             //2. Apply a background color, border, padding, and margin (your choice) to the ordered list using the object literal method demonstrated during lecture
             //3. Add an event listener to the ordered list list items so the color changes as you hover over each individual list item (color is your choice).
+            
+            $("button").css("text-align", "center")
+            $("button").css({
+                // object literal 
+            });
+
+
+
 
         }); //end of ready function 
     </script>
